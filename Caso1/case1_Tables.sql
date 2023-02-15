@@ -11,8 +11,8 @@ CREATE TABLE Units(
 	nameUnit VARCHAR(20)
 );
 
-CREATE TABLE InventaryLogs(
-	idInventaryLogs INTEGER NOT NULL,
+CREATE TABLE InventoryLogs(
+	idInventoryLogs INTEGER NOT NULL,
 	idProductStatus INTEGER NOT NULL,
 	idActionType INTEGER NOT NULL,
 	idProduct INTEGER NOT NULL,
@@ -37,7 +37,7 @@ CREATE TABLE ActionsTypes(
 CREATE TABLE Person(
 	idPerson INTEGER NOT NULL,
 	idGender INTEGER NOT NULL,
-	idAdress INTEGER NOT NULL,
+	idAddress INTEGER NOT NULL,
 	birthday DATE,
 	namePerson VARCHAR(20),
 	photoURL VARCHAR(50),
@@ -101,10 +101,11 @@ CREATE TABLE Districts(
 	nameDistrict VARCHAR(20)
 );
 
-CREATE TABLE Adress(
-	idAdress INTEGER NOT NULL,
+CREATE TABLE Addresses(
+	idAddress INTEGER NOT NULL,
 	idDistrict INTEGER NOT NULL,
-	nameAdress VARCHAR(20)
+	address1 VARCHAR(20),
+	address2 VARCHAR(20)
 );
 
 /*
@@ -180,7 +181,17 @@ CREATE TABLE StorageSpaces(
 	level INTEGER
 );
 
+CREATE TABLE StoragesTypes(
+	idStoragesTypes INTEGER NOT NULL,
+	nameStoragesTypes VARCHAR(20)
+);
+
 CREATE TABLE Companies(
 	idCompany INTEGER NOT NULL,
 	nameCompany VARCHAR(20)
+);
+
+CREATE TABLE Demonyms(
+	idDemonym INTEGER NOT NULL,
+	nameDemonym VARCHAR(20)
 );

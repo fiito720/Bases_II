@@ -82,6 +82,122 @@ ADD CONSTRAINT pk_idVehicleType PRIMARY KEY (idVehicleType);
 ALTER TABLE Districts
 ADD CONSTRAINT pk_idDistrict PRIMARY KEY (idDistrict);
 
+ALTER TABLE Demonyms
+ADD CONSTRAINT pk_idDemonym PRIMARY KEY (idDemonym);
+
+ALTER TABLE StoragesTypes
+ADD CONSTRAINT pk_StoragesTypes PRIMARY KEY (idStoragesTypes);
+
 ALTER TABLE Adress ADD CONSTRAINT
 fk_adress_district FOREIGN KEY (idDistrict)
-REFERENCES District(idDistrict);
+REFERENCES Districts(idDistrict)
+ON DELETE CASCADE
+ON UPDATE CASCADE;
+
+ALTER TABLE Cantons ADD CONSTRAINT
+fk_Canton_Province FOREIGN KEY (idProvince)
+REFERENCES Provinces(idprovince)
+ON DELETE CASCADE
+ON UPDATE CASCADE;
+
+ALTER TABLE Comments ADD CONSTRAINT
+fk_Comment_Service FOREIGN KEY (idService)
+REFERENCES Services(idService)
+ON DELETE CASCADE
+ON UPDATE CASCADE;
+
+ALTER TABLE Countries ADD CONSTRAINT
+fk_Country_Continent FOREIGN KEY (idContinent)
+REFERENCES Continents(idContinent)
+ON DELETE CASCADE
+ON UPDATE CASCADE;
+
+ALTER TABLE Countries ADD CONSTRAINT
+fk_Country_Demonym FOREIGN KEY (idDemonym)
+REFERENCES Demonyms(idDemonym)
+ON DELETE CASCADE
+ON UPDATE CASCADE;
+
+ALTER TABLE Districts ADD CONSTRAINT
+fk_Distric_Canton FOREIGN KEY (idCanton)
+REFERENCES Cantons(idCanton)
+ON DELETE CASCADE
+ON UPDATE CASCADE;
+
+ALTER TABLE Identifications ADD CONSTRAINT
+fk_Identification_IdentificationType FOREIGN KEY (idIdentificationType)
+REFERENCES IdentificationsTypes(idIdentificationType)
+ON DELETE CASCADE
+ON UPDATE CASCADE;
+
+ALTER TABLE Identifications ADD CONSTRAINT
+fk_Identification_Person FOREIGN KEY (idPerson)
+REFERENCES Person(idPerson)
+ON DELETE CASCADE
+ON UPDATE CASCADE;
+
+ALTER TABLE InventaryLogs ADD CONSTRAINT
+fk_InventaryLogs_ProductStatus FOREIGN KEY (idProductStatus)
+REFERENCES ProductStatus(idProductStatus)
+ON DELETE CASCADE
+ON UPDATE CASCADE;
+
+ALTER TABLE InventaryLogs ADD CONSTRAINT
+fk_InventaryLogs_ActionType FOREIGN KEY (idActionType)
+REFERENCES ActionsTypes(idActionType)
+ON DELETE CASCADE
+ON UPDATE CASCADE;
+
+ALTER TABLE InventaryLogs ADD CONSTRAINT
+fk_InventaryLogs_Product FOREIGN KEY (idProduct)
+REFERENCES Products(idProduct)
+ON DELETE CASCADE
+ON UPDATE CASCADE;
+
+ALTER TABLE Person ADD CONSTRAINT
+fk_Person_Gender FOREIGN KEY (idGender)
+REFERENCES Genders(idGender)
+ON DELETE CASCADE
+ON UPDATE CASCADE;
+
+ALTER TABLE Person ADD CONSTRAINT
+fk_Person_Address FOREIGN KEY (idAddress)
+REFERENCES Addresses(idAddress)
+ON DELETE CASCADE
+ON UPDATE CASCADE;
+
+ALTER TABLE Phones ADD CONSTRAINT
+fk_Phone_Person FOREIGN KEY (idPerson)
+REFERENCES Person(idPerson)
+ON DELETE CASCADE
+ON UPDATE CASCADE;
+
+ALTER TABLE Products ADD CONSTRAINT
+fk_Product_Unit FOREIGN KEY (idUnit)
+REFERENCES Units(idUnit)
+ON DELETE CASCADE
+ON UPDATE CASCADE;
+
+ALTER TABLE Provinces ADD CONSTRAINT
+fk_Province_Country FOREIGN KEY (idCountry)
+REFERENCES Countries(idCountry)
+ON DELETE CASCADE
+ON UPDATE CASCADE;
+
+ALTER TABLE StorageSpaces ADD CONSTRAINT
+fk_StorageSpaces_StorageType FOREIGN KEY (idStorageType)
+REFERENCES StoragesTypes(idStoragesTypes)
+ON DELETE CASCADE
+ON UPDATE CASCADE;
+
+ALTER TABLE StorageSpaces ADD CONSTRAINT
+fk_StorageSpaces_Company FOREIGN KEY (idCompany)
+REFERENCES Companies(idCompany)
+ON DELETE CASCADE
+ON UPDATE CASCADE;
+
+ALTER TABLE StorageSpaces ADD CONSTRAINT
+fk_StorageSpaces_InventoryLogs FOREIGN KEY (idInventoryLogs)
+REFERENCES InventoryLogs(idInventoryLogs)
+ON DELETE CASCADE
+ON UPDATE CASCADE;
