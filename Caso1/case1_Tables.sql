@@ -122,16 +122,17 @@ CREATE TABLE UsersTypes(
 	nameUserType VARCHAR(20)
 );
 
-CREATE TABLE Shopping(
-	idUser INTEGER NOT NULL,
+CREATE TABLE Shoppings(
+	idShopping INTEGER NOT NULL,
+	idPerson INTEGER NOT NULL,
 	idProduct INTEGER NOT NULL,
 	dateOfShopping DATE,
 	received BIT NOT NULL
-
 );
 
 CREATE TABLE Comments(
-	idUser INTEGER NOT NULL,
+	idComments INTEGER NOT NULL,
+	idPerson INTEGER NOT NULL,
 	idService INTEGER NOT NULL,
 	descriptionComments VARCHAR(200)
 );
