@@ -1,17 +1,14 @@
 ALTER TABLE ActionsTypes
 ADD CONSTRAINT pk_idActionType PRIMARY KEY (idActionType);
 
-ALTER TABLE Adress
-ADD CONSTRAINT pk_idAdress PRIMARY KEY (idAdress);
+ALTER TABLE Addresses
+ADD CONSTRAINT pk_idAddress PRIMARY KEY (idAddress);
 
 ALTER TABLE Cantons
 ADD CONSTRAINT pk_idCanton PRIMARY KEY (idCanton);
 
 ALTER TABLE Comments
-ADD CONSTRAINT pk_idUserComments PRIMARY KEY (idUser);
-
-ALTER TABLE Comments
-ADD CONSTRAINT pk_idServiceComments PRIMARY KEY (idService);
+ADD CONSTRAINT pk_idUserComments PRIMARY KEY (idComments);
 
 ALTER TABLE Companies
 ADD CONSTRAINT pk_idCompany PRIMARY KEY (idCompany);
@@ -41,7 +38,7 @@ ALTER TABLE Person
 ADD CONSTRAINT pk_idPerson PRIMARY KEY (idPerson);
 
 ALTER TABLE Phones
-ADD CONSTRAINT pk_idPhone PRIMARY KEY (idPhone);
+ADD CONSTRAINT pk_idNumber PRIMARY KEY (idNumber);
 
 ALTER TABLE Products
 ADD CONSTRAINT pk_idProduct PRIMARY KEY (idProduct);
@@ -52,17 +49,14 @@ ADD CONSTRAINT pk_idProductStatus PRIMARY KEY (idProductStatus);
 ALTER TABLE Provinces
 ADD CONSTRAINT pk_idProvince PRIMARY KEY (idProvince);
 
-ALTER TABLE Route
+ALTER TABLE Routes
 ADD CONSTRAINT pk_idRoute PRIMARY KEY (idRoute);
 
 ALTER TABLE Services
 ADD CONSTRAINT pk_idService PRIMARY KEY (idService);
 
-ALTER TABLE Shopping
-ADD CONSTRAINT pk_idProductShopping PRIMARY KEY (idProduct);
-
-ALTER TABLE Shopping
-ADD CONSTRAINT pk_idUserShopping PRIMARY KEY (idUser);
+ALTER TABLE Shoppings
+ADD CONSTRAINT pk_idShopping PRIMARY KEY (idShopping);
 
 ALTER TABLE StorageSpaces
 ADD CONSTRAINT pk_idStorageSpace PRIMARY KEY (idStorageSpace);
@@ -88,8 +82,8 @@ ADD CONSTRAINT pk_idDemonym PRIMARY KEY (idDemonym);
 ALTER TABLE StoragesTypes
 ADD CONSTRAINT pk_StoragesTypes PRIMARY KEY (idStoragesTypes);
 
-ALTER TABLE Adress ADD CONSTRAINT
-fk_adress_district FOREIGN KEY (idDistrict)
+ALTER TABLE Addresses ADD CONSTRAINT
+fk_address_district FOREIGN KEY (idDistrict)
 REFERENCES Districts(idDistrict)
 ON DELETE CASCADE
 ON UPDATE CASCADE;
@@ -103,6 +97,12 @@ ON UPDATE CASCADE;
 ALTER TABLE Comments ADD CONSTRAINT
 fk_Comment_Service FOREIGN KEY (idService)
 REFERENCES Services(idService)
+ON DELETE CASCADE
+ON UPDATE CASCADE;
+
+ALTER TABLE Comments ADD CONSTRAINT
+fk_Comment_Person FOREIGN KEY (idPerson)
+REFERENCES Person(idPerson)
 ON DELETE CASCADE
 ON UPDATE CASCADE;
 
@@ -136,20 +136,20 @@ REFERENCES Person(idPerson)
 ON DELETE CASCADE
 ON UPDATE CASCADE;
 
-ALTER TABLE InventaryLogs ADD CONSTRAINT
-fk_InventaryLogs_ProductStatus FOREIGN KEY (idProductStatus)
+ALTER TABLE InventoryLogs ADD CONSTRAINT
+fk_InventoryLogs_ProductStatus FOREIGN KEY (idProductStatus)
 REFERENCES ProductStatus(idProductStatus)
 ON DELETE CASCADE
 ON UPDATE CASCADE;
 
-ALTER TABLE InventaryLogs ADD CONSTRAINT
-fk_InventaryLogs_ActionType FOREIGN KEY (idActionType)
+ALTER TABLE InventoryLogs ADD CONSTRAINT
+fk_InventoryLogs_ActionType FOREIGN KEY (idActionType)
 REFERENCES ActionsTypes(idActionType)
 ON DELETE CASCADE
 ON UPDATE CASCADE;
 
-ALTER TABLE InventaryLogs ADD CONSTRAINT
-fk_InventaryLogs_Product FOREIGN KEY (idProduct)
+ALTER TABLE InventoryLogs ADD CONSTRAINT
+fk_InventoryLogs_Product FOREIGN KEY (idProduct)
 REFERENCES Products(idProduct)
 ON DELETE CASCADE
 ON UPDATE CASCADE;
@@ -160,7 +160,7 @@ REFERENCES Genders(idGender)
 ON DELETE CASCADE
 ON UPDATE CASCADE;
 
-ALTER TABLE Person ADD CONSTRAINT
+ALTER TABLE dbo.Person ADD CONSTRAINT
 fk_Person_Address FOREIGN KEY (idAddress)
 REFERENCES Addresses(idAddress)
 ON DELETE CASCADE
@@ -199,5 +199,41 @@ ON UPDATE CASCADE;
 ALTER TABLE StorageSpaces ADD CONSTRAINT
 fk_StorageSpaces_InventoryLogs FOREIGN KEY (idInventoryLogs)
 REFERENCES InventoryLogs(idInventoryLogs)
+ON DELETE CASCADE
+ON UPDATE CASCADE;
+
+ALTER TABLE Routes ADD CONSTRAINT
+fk_Routes_Service FOREIGN KEY (idService)
+REFERENCES Services(idService)
+ON DELETE CASCADE
+ON UPDATE CASCADE;
+
+ALTER TABLE Routes ADD CONSTRAINT
+fk_Routes_Vehicle FOREIGN KEY (idVehicle)
+REFERENCES Vehicles(idVehicle)
+ON DELETE CASCADE
+ON UPDATE CASCADE;
+
+ALTER TABLE Shoppings ADD CONSTRAINT
+fk_Shopping_Person FOREIGN KEY (idPerson)
+REFERENCES Person(idPerson)
+ON DELETE CASCADE
+ON UPDATE CASCADE;
+
+ALTER TABLE Shoppings ADD CONSTRAINT
+fk_Shopping_Product FOREIGN KEY (idProduct)
+REFERENCES Products(idProduct)
+ON DELETE CASCADE
+ON UPDATE CASCADE;
+
+ALTER TABLE Vehicles ADD CONSTRAINT
+fk_Vehicle_VehicleType FOREIGN KEY (idVehicleType)
+REFERENCES VehiclesTypes(idVehicleType)
+ON DELETE CASCADE
+ON UPDATE CASCADE;
+
+ALTER TABLE UsersTypes ADD CONSTRAINT
+fk_UsersTypes_Person FOREIGN KEY (idPerson)
+REFERENCES Person(idPerson)
 ON DELETE CASCADE
 ON UPDATE CASCADE;

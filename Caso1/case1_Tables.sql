@@ -119,6 +119,7 @@ CREATE TABLE Users(
 
 CREATE TABLE UsersTypes(
 	idUserType INTEGER NOT NULL,
+	idPerson INTEGER NOT NULL,
 	nameUserType VARCHAR(20)
 );
 
@@ -149,6 +150,7 @@ CREATE TABLE Services(
 CREATE TABLE Routes(
 	idRoute INTEGER NOT NULL,
 	idService INTEGER NOT NULL,
+	idVehicle INTEGER NOT NULL,
 	attendantName VARCHAR(20),
 	destiny VARCHAR(100),
 	dateOfRoute DATE
