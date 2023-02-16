@@ -122,23 +122,23 @@ INSERT INTO Shoppings(idShopping, idPerson, idProduct, dateOfShopping, received)
 VALUES(1,1,5,'2023/01/25', 1);
 
 INSERT INTO Shoppings(idShopping, idPerson, idProduct, dateOfShopping, received)
-VALUES(2,1,3,'2023/01/25', 1);
+VALUES(2,1,3,'2023/02/10', 1);
 
 INSERT INTO Shoppings(idShopping, idPerson, idProduct, dateOfShopping, received)
-VALUES(3,1,6,'2023/01/26', 1);
+VALUES(3,1,6,'2023/02/14', 1);
 
 --Persona 2
 INSERT INTO Shoppings(idShopping, idPerson, idProduct, dateOfShopping, received)
-VALUES(4,2,5,'2023/01/25', 1);
+VALUES(4,2,5,'2023/02/03', 1);
 
 INSERT INTO Shoppings(idShopping, idPerson, idProduct, dateOfShopping, received)
-VALUES(5,2,5,'2023/01/25', 1);
+VALUES(5,2,5,'2023/02/05', 1);
 
 INSERT INTO Shoppings(idShopping, idPerson, idProduct, dateOfShopping, received)
-VALUES(6,2,5,'2023/01/25', 1);
+VALUES(6,2,5,'2023/02/11', 1);
 
 INSERT INTO Shoppings(idShopping, idPerson, idProduct, dateOfShopping, received)
-VALUES(7,2,5,'2023/01/25', 1);
+VALUES(7,2,5,'2023/02/14', 1);
 
 --Persona 3
 
@@ -146,19 +146,19 @@ INSERT INTO Shoppings(idShopping, idPerson, idProduct, dateOfShopping, received)
 VALUES(8,3,15,'2023/01/23', 1);
 
 INSERT INTO Shoppings(idShopping, idPerson, idProduct, dateOfShopping, received)
-VALUES(9,3,15,'2023/01/23', 1);
+VALUES(9,3,15,'2023/02/04', 1);
 
 INSERT INTO Shoppings(idShopping, idPerson, idProduct, dateOfShopping, received)
-VALUES(10,3,12,'2023/01/23', 1);
+VALUES(10,3,12,'2023/02/08', 1);
 
 INSERT INTO Shoppings(idShopping, idPerson, idProduct, dateOfShopping, received)
-VALUES(11,3,15,'2023/01/23', 1);
+VALUES(11,3,15,'2023/02/10', 1);
 
 INSERT INTO Shoppings(idShopping, idPerson, idProduct, dateOfShopping, received)
-VALUES(12,3,12,'2023/01/23', 1);
+VALUES(12,3,12,'2023/02/13', 1);
 
 INSERT INTO Shoppings(idShopping, idPerson, idProduct, dateOfShopping, received)
-VALUES(13,3,15,'2023/01/23', 1);
+VALUES(13,3,15,'2023/02/14', 1);
 
 --Persona 4
 
@@ -169,18 +169,18 @@ INSERT INTO Shoppings(idShopping, idPerson, idProduct, dateOfShopping, received)
 VALUES(15,4,9,'2023/01/22', 1);
 
 INSERT INTO Shoppings(idShopping, idPerson, idProduct, dateOfShopping, received)
-VALUES(16,4,8,'2023/01/22', 1);
+VALUES(16,4,8,'2023/02/06', 1);
 
 INSERT INTO Shoppings(idShopping, idPerson, idProduct, dateOfShopping, received)
-VALUES(17,4,7,'2023/01/22', 1);
+VALUES(17,4,7,'2023/02/11', 1);
 
 INSERT INTO Shoppings(idShopping, idPerson, idProduct, dateOfShopping, received)
-VALUES(18,4,11,'2023/01/22', 1);
+VALUES(18,4,11,'2023/02/14', 1);
 
 --Persona 5
 
 INSERT INTO Shoppings(idShopping, idPerson, idProduct, dateOfShopping, received)
-VALUES(19,5, 4,'2023/01/22', 1);
+VALUES(19,5, 4,'2023/01/26', 1);
 
 --Persona 6
 
@@ -190,30 +190,30 @@ VALUES(20,6, 2,'2023/01/22', 1);
 --Persona 7
 
 INSERT INTO Shoppings(idShopping, idPerson, idProduct, dateOfShopping, received)
-VALUES(21,7, 4,'2023/01/23', 1);
+VALUES(21,7, 4,'2023/01/28', 1);
 
 --Persona 8
 
 INSERT INTO Shoppings(idShopping, idPerson, idProduct, dateOfShopping, received)
-VALUES(22,8, 4,'2023/01/22', 1);
+VALUES(22,8, 4,'2023/02/13', 1);
 
 --Persona 9
 
 INSERT INTO Shoppings(idShopping, idPerson, idProduct, dateOfShopping, received)
-VALUES(23,9, 8,'2023/01/23', 1);
+VALUES(23,9, 8,'2023/02/02', 1);
 
 --Persona 10
 
 INSERT INTO Shoppings(idShopping, idPerson, idProduct, dateOfShopping, received)
-VALUES(24,10, 7,'2023/01/22', 1);
+VALUES(24,10, 7,'2023/02/07', 1);
 
 --Persona 11
 
 INSERT INTO Shoppings(idShopping, idPerson, idProduct, dateOfShopping, received)
-VALUES(25,11, 7,'2023/01/23', 1);
+VALUES(25,11, 7,'2023/02/09', 1);
 
 INSERT INTO Shoppings(idShopping, idPerson, idProduct, dateOfShopping, received)
-VALUES(26,11, 7,'2023/01/24', 1);
+VALUES(26,11, 7,'2023/02/08', 1);
 
 --Persona 12
 
@@ -224,22 +224,22 @@ INSERT INTO Shoppings(idShopping, idPerson, idProduct, dateOfShopping, received)
 VALUES(28,13, 15,'2023/01/24', 1);
 
 INSERT INTO Shoppings(idShopping, idPerson, idProduct, dateOfShopping, received)
-VALUES(29,14, 1,'2023/01/24', 1);
+VALUES(29,14, 1,'2023/02/02', 1);
 
 INSERT INTO Shoppings(idShopping, idPerson, idProduct, dateOfShopping, received)
-VALUES(30,15, 2,'2023/01/24', 1);
+VALUES(30,15, 2,'2023/02/04', 1);
 
 INSERT INTO Shoppings(idShopping, idPerson, idProduct, dateOfShopping, received)
-VALUES(31,16, 1,'2023/01/24', 1);
+VALUES(31,16, 1,'2023/02/06', 1);
 
 INSERT INTO Shoppings(idShopping, idPerson, idProduct, dateOfShopping, received)
-VALUES(32,17, 11,'2023/01/24', 1);
+VALUES(32,17, 11,'2023/02/08', 1);
 
 INSERT INTO Shoppings(idShopping, idPerson, idProduct, dateOfShopping, received)
-VALUES(33,18, 11,'2023/01/24', 1);
+VALUES(33,18, 11,'2023/02/10', 1);
 
 INSERT INTO Shoppings(idShopping, idPerson, idProduct, dateOfShopping, received)
-VALUES(34,19, 12,'2023/01/23', 1);
+VALUES(34,19, 12,'2023/02/12', 1);
 
 --Persona 20
 
@@ -247,35 +247,56 @@ INSERT INTO Shoppings(idShopping, idPerson, idProduct, dateOfShopping, received)
 VALUES(35,20, 8,'2023/01/24', 1);
 
 INSERT INTO Shoppings(idShopping, idPerson, idProduct, dateOfShopping, received)
-VALUES(36,20, 8,'2023/01/24', 1);
+VALUES(36,20, 8,'2023/01/27', 1);
 
 INSERT INTO Shoppings(idShopping, idPerson, idProduct, dateOfShopping, received)
-VALUES(37,20, 8,'2023/01/24', 1);
+VALUES(37,20, 8,'2023/02/01', 1);
 
 INSERT INTO Shoppings(idShopping, idPerson, idProduct, dateOfShopping, received)
-VALUES(38,20, 8,'2023/01/24', 1);
+VALUES(38,20, 8,'2023/02/02', 1);
 
 INSERT INTO Shoppings(idShopping, idPerson, idProduct, dateOfShopping, received)
-VALUES(39,20, 8,'2023/01/24', 1);
+VALUES(39,20, 8,'2023/02/04', 1);
 
 INSERT INTO Shoppings(idShopping, idPerson, idProduct, dateOfShopping, received)
-VALUES(40,20, 8,'2023/01/24', 1);
+VALUES(40,20, 8,'2023/02/05', 1);
 
 INSERT INTO Shoppings(idShopping, idPerson, idProduct, dateOfShopping, received)
-VALUES(41,20, 8,'2023/01/24', 1);
+VALUES(41,20, 8,'2023/02/07', 1);
 
 INSERT INTO Shoppings(idShopping, idPerson, idProduct, dateOfShopping, received)
-VALUES(42,20, 8,'2023/01/24', 1);
+VALUES(42,20, 8,'2023/02/08', 1);
 
 INSERT INTO Shoppings(idShopping, idPerson, idProduct, dateOfShopping, received)
-VALUES(43,20, 8,'2023/01/24', 1);
+VALUES(43,20, 8,'2023/02/10', 1);
 
 INSERT INTO Shoppings(idShopping, idPerson, idProduct, dateOfShopping, received)
-VALUES(44,20, 8,'2023/01/24', 1);
+VALUES(44,20, 8,'2023/02/11', 1);
 
 INSERT INTO Shoppings(idShopping, idPerson, idProduct, dateOfShopping, received)
-VALUES(45,20, 8,'2023/01/24', 1);
+VALUES(45,20, 8,'2023/02/13', 1);
 
+--Top 5 personas
+SELECT TOP 5 s.idPerson AS Client_id, c.namePerson as 'Name', COUNT(s.idProduct) AS Bought
+FROM Shoppings s
+INNER JOIN Products p
+ON S.idProduct = p.idProduct
+INNER JOIN Person c
+ON S.idPerson = c.idPerson
+GROUP BY s.idPerson, c.namePerson
+ORDER BY Bought desc;
+
+--Total compras por persona
+SELECT s.idPerson AS Client_id, c.namePerson as 'Name', COUNT(s.idProduct) AS Bought
+FROM Shoppings s
+INNER JOIN Products p
+ON S.idProduct = p.idProduct
+INNER JOIN Person c
+ON S.idPerson = c.idPerson
+GROUP BY s.idPerson, c.namePerson
+ORDER BY Bought desc;
+
+--Total productos
 SELECT s.idProduct AS ProductCode, p.nameProduct, COUNT(s.idProduct) AS sold
 FROM Shoppings s
 INNER JOIN Products p
