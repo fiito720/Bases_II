@@ -276,6 +276,27 @@ VALUES(44,20, 8,'2023/01/24', 1);
 INSERT INTO Shoppings(idShopping, idPerson, idProduct, dateOfShopping, received)
 VALUES(45,20, 8,'2023/01/24', 1);
 
+--Top 5 personas
+SELECT TOP 5 s.idPerson AS Client_id, c.namePerson as 'Name', COUNT(s.idProduct) AS Bought
+FROM Shoppings s
+INNER JOIN Products p
+ON S.idProduct = p.idProduct
+INNER JOIN Person c
+ON S.idPerson = c.idPerson
+GROUP BY s.idPerson, c.namePerson
+ORDER BY Bought desc;
+
+--Total compras por persona
+SELECT s.idPerson AS Client_id, c.namePerson as 'Name', COUNT(s.idProduct) AS Bought
+FROM Shoppings s
+INNER JOIN Products p
+ON S.idProduct = p.idProduct
+INNER JOIN Person c
+ON S.idPerson = c.idPerson
+GROUP BY s.idPerson, c.namePerson
+ORDER BY Bought desc;
+
+--Total productos
 SELECT s.idProduct AS ProductCode, p.nameProduct, COUNT(s.idProduct) AS sold
 FROM Shoppings s
 INNER JOIN Products p
