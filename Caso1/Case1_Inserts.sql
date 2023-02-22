@@ -1,47 +1,22 @@
-INSERT INTO dbo.Products(idProduct, idUnit, nameProduct, enable)
-VALUES(1, 1, 'Manzana', 1);
+INSERT INTO dbo.Products(idProduct, idUnit, nameProduct, enable, price)
+VALUES(2, 1, 'Pera', 1, 600.0),
+(3, 1, 'Harina', 1, 1200.0),
+(4, 1, 'Atun', 1, 725.0),
+(5, 2, 'Leche', 1, 1100.0),
+(6, 2, 'Agua', 1, 150.0),
+(7, 2, 'Jugo de naranja', 1, 900.0),
+(8, 1, 'Galletas soda', 1, 600.0),
+(9, 1, 'ElectroLit', 1, 1500.0),
+(10, 1, 'Ajo', 1, 500.0),
+(11, 1, 'Leche en polvo', 1, 4000.0),
+(12, 1, 'Fideos Suli', 1, 500.0),
+(13, 1, 'Pera', 1, 900.0),
+(14, 1, 'Churrrasco', 1, 5500.0),
+(15, 2, 'Yugurt de almendras', 1, 6000.0)
+go
 
-INSERT INTO dbo.Products(idProduct, idUnit, nameProduct, enable)
-VALUES(2, 1, 'Uva', 1);
-
-INSERT INTO dbo.Products(idProduct, idUnit, nameProduct, enable)
-VALUES(3, 1, 'Zanahoria', 1);
-
-INSERT INTO dbo.Products(idProduct, idUnit, nameProduct, enable)
-VALUES(4, 1, 'Masa', 1);
-
-INSERT INTO dbo.Products(idProduct, idUnit, nameProduct, enable)
-VALUES(5, 2, 'Tabasco', 1);
-
-INSERT INTO dbo.Products(idProduct, idUnit, nameProduct, enable)
-VALUES(6, 2, 'Salsa de tomate', 1);
-
-INSERT INTO dbo.Products(idProduct, idUnit, nameProduct, enable)
-VALUES(7, 1, 'Maiz', 1);
-
-INSERT INTO dbo.Products(idProduct, idUnit, nameProduct, enable)
-VALUES(8, 2, 'Mostaza', 1);
-
-INSERT INTO dbo.Products(idProduct, idUnit, nameProduct, enable)
-VALUES(9, 1, 'Frijoles', 1);
-
-INSERT INTO dbo.Products(idProduct, idUnit, nameProduct, enable)
-VALUES(10, 2, 'Leche', 1);
-
-INSERT INTO dbo.Products(idProduct, idUnit, nameProduct, enable)
-VALUES(11, 1, 'Queso', 1);
-
-INSERT INTO dbo.Products(idProduct, idUnit, nameProduct, enable)
-VALUES(12, 1, 'Salchichon', 1);
-
-INSERT INTO dbo.Products(idProduct, idUnit, nameProduct, enable)
-VALUES(13, 1, 'Culantro', 1);
-
-INSERT INTO dbo.Products(idProduct, idUnit, nameProduct, enable)
-VALUES(14, 1, 'Tomillo', 1);
-
-INSERT INTO dbo.Products(idProduct, idUnit, nameProduct, enable)
-VALUES(15, 2, 'Coca cola', 1);
+INSERT INTO dbo.Products(idProduct, idUnit, nameProduct, enable, price)
+VALUES(8, 1, 'Galletas soda', 1, 600.0);
 
 INSERT INTO dbo.Units(idUnit, nameUnit)
 VALUES(1, 'Gramo');
